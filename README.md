@@ -18,7 +18,7 @@ Setting up a web application on an AWS EC2 instance involves several steps, from
 
 ### Complete YouTube Video Tutorial:
 
-https://youtu.be/UK_OVKDRArs?si=G620QaGNjJOA0LGR
+<!-- https://youtu.be/UK_OVKDRArs?si=G620QaGNjJOA0LGR -->
 
 ### Step 1: Launch an AWS EC2 Ubuntu Server
 
@@ -66,7 +66,7 @@ it will ask you for your GitHub username and password. You can use a Personal Ac
   ```
 ### Step 7: Create Nginx File
 with this command, you can check if already a default nginx file exists. You have to remove it.
-
+<!-- */ej8eu/* -->
 
 ```bash
 cd /etc/nginx/sites-enabled/
