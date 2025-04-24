@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo '🚀 Deploying to EC2 instance...'
                 sh """
-                    ssh -o StrictHostKeyChecking=no -i ${PEM_PATH} ${EC2_USER}@${EC2_HOST} << 'EOF'
+                    ssh -o StrictHostKeyChecking=no -i $$PEM_PATH $$EC2_USER@$$EC2_HOST << 'EOF'
                         REPO_URL="https://github.com/KapilQadir/react-aws-ec2-nginx.git"
                         APP_DIR="/home/ec2-user/react-app"
                         NGINX_DIR="/var/www/vhosts/frontend"
