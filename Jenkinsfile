@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         EC2_USER = "ec2-user"
-        EC2_HOST = "13.42.9.17"
+        EC2_HOST = "18.134.143.227"
         PEM_PATH = "/var/lib/jenkins/keys/react-app-training.pem"
     }
 
@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '🚀 Deploying to EC2 instance...'
-                sh """
+                
                     ssh -o StrictHostKeyChecking=no -i \$PEM_PATH \$EC2_USER@\$EC2_HOST << 'EOF'
                         REPO_URL="https://github.com/KapilQadir/react-aws-ec2-nginx.git"
                         APP_DIR="/home/ec2-user/react-app"
@@ -47,7 +47,7 @@ pipeline {
                         echo "🔁 Restarting Nginx..."
                         sudo systemctl restart nginx
                     EOF
-                """
+                
             }
         }
     }
