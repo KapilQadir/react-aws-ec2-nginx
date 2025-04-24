@@ -12,6 +12,8 @@ const io = new Server(server , {
 })
 
 
+// test
+
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../react-aws-ec2-nginx/build");
 
