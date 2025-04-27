@@ -22,6 +22,7 @@ pipeline {
                 ssh -o StrictHostKeyChecking=no -i \$PEM_PATH \$EC2_USER@\$EC2_HOST << EOF
                   cd ~/react-app
                   git pull origin main
+                  node -v
                   npm install
                   npm run build
                   sudo systemctl restart nginx
