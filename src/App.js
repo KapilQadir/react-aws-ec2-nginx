@@ -10,16 +10,6 @@ function App() {
     document.getElementById("result").innerHTML = resultMessage;
   }
 
-  const subscribeToChannel = () => {
-    // Redirect users to subscribe to the YouTube channel
-    window.open('https://youtube.com/@codewithmuh?sub_confirmation=1', '_blank');
-  }
-
-  const toGithubRepo = () => {
-    // Redirect users to subscribe to the YouTube channel
-    window.open('https://github.com/codewithmuh/react-aws-ec2-nginx.git', '_blank');
-  }
-
   return (
     <div className="App"> {/* Add class to center content */}
       <header>
