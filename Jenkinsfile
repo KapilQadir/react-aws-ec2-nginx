@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs 'node18.18'
+    }
     environment {
         EC2_USER = "ec2-user"
         EC2_HOST = "18.135.69.143"
