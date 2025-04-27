@@ -3,6 +3,9 @@ pipeline {
     tools {
         nodejs 'node18.18'
     }
+    stage('Check Node Version') {
+        sh 'node -v'
+    }
     environment {
         EC2_USER = "ec2-user"
         EC2_HOST = "18.135.69.143"
