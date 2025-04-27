@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         EC2_USER = "ec2-user"
-        EC2_HOST = "18.134.143.227"
+        EC2_HOST = "18.135.69.143"
         PEM_PATH = "/var/lib/jenkins/keys/react-app-training.pem"
     }
 
