@@ -20,6 +20,9 @@ pipeline {
         }
 
         stage('Build') {
+            environment {
+                NODE_OPTIONS = "--openssl-legacy-provider"  // Set NODE_OPTIONS for Build stage only
+            }
             steps {
                 echo '✅ Building the React app in Jenkins'
                 sh 'npm install'  // Install dependencies
