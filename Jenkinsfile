@@ -3,9 +3,6 @@ pipeline {
     tools {
         nodejs 'node18.18'
     }
-    stage('Check Node Version') {
-        sh 'node -v'
-    }
     environment {
         EC2_USER = "ec2-user"
         EC2_HOST = "18.135.69.143"
@@ -13,6 +10,12 @@ pipeline {
     }
 
     stages {
+        stage('Check Node Version') {
+            steps {
+                echo '📝 Checking Node.js version'
+                sh 'node -v'  // This will print the Node.js version in Jenkins logs
+            }
+        }
         stage('Build') {
             steps {
                 echo '✅ Build step - compiling the React app'
