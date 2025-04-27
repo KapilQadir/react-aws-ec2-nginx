@@ -30,6 +30,7 @@ pipeline {
                 ssh -o StrictHostKeyChecking=no -i \$PEM_PATH \$EC2_USER@\$EC2_HOST << EOF
                   cd ~/react-app
                   git pull origin main
+                  nvm use 18.18.0
                   node -v
                   npm install
                   npm run build
