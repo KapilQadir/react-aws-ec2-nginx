@@ -39,15 +39,6 @@ pipeline {
             }
         }
 
-        stage('Restart Nginx on EC2') {
-            steps {
-                echo '🔄 Restarting Nginx on EC2...'
-                sh """
-                ssh -o StrictHostKeyChecking=no -i \$PEM_PATH \$EC2_USER@\$EC2_HOST << EOF
-                  sudo systemctl restart nginx
-                EOF
-                """
-            }
-        }
+        
     }
 }
