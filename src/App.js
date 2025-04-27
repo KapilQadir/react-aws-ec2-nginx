@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App"> {/* Add class to center content */}
       <header>
-        <h1>Welcome to <span>CodeWithMuh</span> Youtube Channel!</h1>
+        <h1>Welcome to <span>Qadir</span> Youtube Channel!</h1>
       </header>
       <main>
         <img src={logo} className="App-logo" alt="logo" /> {/* Use imported logo */}
@@ -33,8 +33,6 @@ function App() {
         <p>Are you connected with me on LinkedIn?</p>
         <button onClick={checkLinkedInConnection}>Check Connection</button>
         <p id="result"></p>
-        <button onClick={subscribeToChannel}>Subscribe to my channel</button>
-        <button onClick={toGithubRepo}>Github Repo</button>
       </main>
       <footer>
         <p>&copy; 2024 <span>CodeWithMuh</span></p>
