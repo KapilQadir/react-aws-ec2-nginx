@@ -22,7 +22,7 @@ function App() {
         <h2>LinkedIn Connection Game</h2>
         <p>Are you connected with me on LinkedIn?</p>
         {/* <button onCliqck={checkLinkedInConnection}>Check Connection</button> */}
-        <p id="result"></p>
+        {/* <p id="result"></p> */}
       </main>
       <footer>
         <p>&copy; 2025 <span>CodeWithkapil</span></p>
