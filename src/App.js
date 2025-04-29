@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App"> {/* Add class to center content */}
       <header>
-        <h1>Welcome to <span>Qadir</span> Youtube Channel!</h1>
+        <h1>Welcome to <span>Qadir</span> React World!</h1>
       </header>
       <main>
         <img src={logo} className="App-logo" alt="logo" /> {/* Use imported logo */}
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xn3Xj9Trepc?si=3ObvKIX4iKU-nHbf" frameBorder="0" allowFullScreen title="YouTube video"></iframe>
+        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Xn3Xj9Trepc?si=3ObvKIX4iKU-nHbf" frameBorder="0" allowFullScreen title="YouTube video"></iframe> */}
         <p>You are watching my latest video on <span>AWS EC2</span>.</p>
         <h2>LinkedIn Connection Game</h2>
         <p>Are you connected with me on LinkedIn?</p>
@@ -25,7 +25,7 @@ function App() {
         <p id="result"></p>
       </main>
       <footer>
-        <p>&copy; 2024 <span>CodeWithMuh</span></p>
+        <p>&copy; 2024 <span>CodeWithkapil</span></p>
       </footer>
     </div>
   );
