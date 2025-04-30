@@ -33,23 +33,21 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                echo '🚀 Deploying the build to EC2 instance...'
-                sshagent(credentials: ['react-app-training-ssh']) {
+                echo '🚀 Deploying the build to EC2 instance using SSH credentials'
+                sshagent(['react-app-training-ssh']) {
                     sh """
-                    scp -o StrictHostKeyChecking=no -r ${BUILD_DIR}/* ${EC2_USER}@${EC2_HOST}:${EC2_DEPLOY_DIR}
+                        scp -o StrictHostKeyChecking=no -r ${BUILD_DIR}/* ec2-user@${EC2_HOST}:${EC2_DEPLOY_DIR}
                     """
                 }
             }
         }
 
-        stage('Restart Nginx') {
+       stage('Restart Nginx') {
             steps {
-                echo '🔄 Restarting Nginx on EC2...'
-                sshagent(credentials: ['react-app-training-ssh']) {
+                echo '🔄 Restarting Nginx on EC2 instance...'
+                sshagent(['react-app-training-ssh']) {
                     sh """
-                    ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << 'EOF'
-                        sudo systemctl restart nginx
-                    EOF
+                        ssh -o StrictHostKeyChecking=no ec2-user@${EC2_HOST} 'sudo systemctl restart nginx'
                     """
                 }
             }
